@@ -6,8 +6,8 @@ from datetime import datetime, timezone
 OUT = Path("docs/festivos.ics")
 OUT.parent.mkdir(parents=True, exist_ok=True)
 events = []
-def event(title, day, recurrence=False, description=""):
-    uid = str(uuid5(NAMESPACE_URL, "almeria-festivos:"+title+":"+str(day)))
+def event(title, day, recurrence=False, description="", uid_title=None):
+    uid = str(uuid5(NAMESPACE_URL, "almeria-festivos:"+(uid_title or title)+":"+str(day)))
     end = day + timedelta(days=1)
     lines = ["BEGIN:VEVENT", "UID:"+uid+"@calendario-festivos-almeria", "DTSTAMP:20261026T000000Z",
              "DTSTART;VALUE=DATE:"+day.strftime("%Y%m%d"),
@@ -29,11 +29,16 @@ fixed = [
 for name,m,d,y in fixed: event(name,date(y,m,d),True,"Celebración anual; no implica festivo laboral.")
 # Local holidays: only officially confirmed years. Add new years after verification.
 local = [
- ("El Ejido — San Marcos 🐂",date(2027,4,26)),
- ("El Ejido — San Isidro Labrador 🎉",date(2027,6,28)),
- ("Roquetas — Santa Ana y Virgen del Carmen ⛪️",date(2027,7,26)),
- ("Roquetas — Virgen del Rosario 🌹",date(2027,10,7))]
-for name,day in local: event(name,day,False,"Festivo local aprobado para este año.")
+ ("San Marcos 🐂",date(2027,4,26)),
+ ("San Isidro Labrador 🎉",date(2027,6,28)),
+ ("Santa Ana y Virgen del Carmen ⛪️",date(2027,7,26)),
+ ("Virgen del Rosario 🌹",date(2027,10,7))]
+for name,day in local:
+    legacy_title = {"San Marcos 🐂":"El Ejido — San Marcos 🐂",
+                    "San Isidro Labrador 🎉":"El Ejido — San Isidro Labrador 🎉",
+                    "Santa Ana y Virgen del Carmen ⛪️":"Roquetas — Santa Ana y Virgen del Carmen ⛪️",
+                    "Virgen del Rosario 🌹":"Roquetas — Virgen del Rosario 🌹"}[name]
+    event(name,day,False,"Festivo local aprobado para este año.",uid_title=legacy_title)
 def easter(y):
     a=y%19;b=y//100;c=y%100;d=b//4;e=b%4;f=(b+8)//25;g=(b-f+1)//3
     h=(19*a+b-d-g+15)%30;i=c//4;k=c%4;l=(32+2*e+2*i-h-k)%7
