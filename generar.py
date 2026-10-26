@@ -23,8 +23,8 @@ fixed = [
  ("Navidad 🎅🏼",12,25,2026),("Nochevieja 🎊",12,31,2026),
  ("Año Nuevo 🎊",1,1,2027),("Día de Andalucía 🎉",2,28,2027),
  ("Día del Padre 🎉",3,19,2027),("Día del Trabajador 🎉",5,1,2027),
- ("San Juan 🎉",6,23,2027),("Virgen del Carmen 🎉",7,26,2027),
- ("Asunción de la Virgen 🎉",8,15,2027),("Virgen del Rosario 🎉",10,7,2027),
+ ("San Juan 🎉",6,23,2027),("Virgen del Carmen 🎉",7,16,2027),
+ ("Asunción de la Virgen 🎉",8,15,2027),
  ("Fiesta Nacional 🇪🇸",10,12,2027),("Reyes Magos 🎉",1,6,2027)]
 for name,m,d,y in fixed: event(name,date(y,m,d),True,"Celebración anual; no implica festivo laboral.")
 # Local holidays: only officially confirmed years. Add new years after verification.
