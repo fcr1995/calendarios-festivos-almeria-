@@ -144,7 +144,7 @@ UID:9e37fa92-8dfe-53ee-9e94-e5bcaa70d41b@calendario-festivos-almeria
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270426
 DTEND;VALUE=DATE:20270427
-SUMMARY:El Ejido — San Marcos 🐂
+SUMMARY:San Marcos 🐂
 DESCRIPTION:Festivo local aprobado para este año.
 END:VEVENT
 BEGIN:VEVENT
@@ -152,7 +152,7 @@ UID:38a0e8ad-a1b3-563d-b3f0-6997087b9ab6@calendario-festivos-almeria
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270628
 DTEND;VALUE=DATE:20270629
-SUMMARY:El Ejido — San Isidro Labrador 🎉
+SUMMARY:San Isidro Labrador 🎉
 DESCRIPTION:Festivo local aprobado para este año.
 END:VEVENT
 BEGIN:VEVENT
@@ -160,7 +160,7 @@ UID:450ca968-f741-53a0-8c33-fa4da1f8b5d3@calendario-festivos-almeria
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270726
 DTEND;VALUE=DATE:20270727
-SUMMARY:Roquetas — Santa Ana y Virgen del Carmen ⛪️
+SUMMARY:Santa Ana y Virgen del Carmen ⛪️
 DESCRIPTION:Festivo local aprobado para este año.
 END:VEVENT
 BEGIN:VEVENT
@@ -168,7 +168,7 @@ UID:5b260825-d089-5d67-a297-41342e6a73da@calendario-festivos-almeria
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20271007
 DTEND;VALUE=DATE:20271008
-SUMMARY:Roquetas — Virgen del Rosario 🌹
+SUMMARY:Virgen del Rosario 🌹
 DESCRIPTION:Festivo local aprobado para este año.
 END:VEVENT
 BEGIN:VEVENT
